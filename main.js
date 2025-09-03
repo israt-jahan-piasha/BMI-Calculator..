@@ -1,8 +1,8 @@
 document.getElementById('bmiForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            const weight = parseFloat(document.getElementById('weight').value);
-            const height = parseFloat(document.getElementById('height').value) / 100; 
-            const bmi = weight / (height * height);
+            let weight = parseFloat(document.getElementById('weight').value);
+            let height = parseFloat(document.getElementById('height').value) / 100; 
+            let bmi = weight / (height * height);
             let category = '';
 
             if (bmi < 18.5) {
@@ -16,4 +16,5 @@ document.getElementById('bmiForm').addEventListener('submit', function(event) {
             }
 
             document.getElementById('result').innerText = `Your BMI is ${bmi.toFixed(2)} (${category})`;
+
         });
